@@ -1,4 +1,4 @@
-package com.e2eTest.automation.Utilis;
+package com.e2eTest.automation.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -25,3 +25,4 @@ public class BasePage {
 	}
 
 }
+  

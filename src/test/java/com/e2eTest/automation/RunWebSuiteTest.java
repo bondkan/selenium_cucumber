@@ -9,20 +9,20 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 //Java Doc = documentation (les lignes en bleu)
 
 /**
- * The @CucumberOptions Annotation is used to define the location of feature
- * files, step definitions, reporting integration.
+ * The Test Runner File uses the @RunWith() Annotation from JUnit for executing
+ * tests.
  */
 @RunWith(Cucumber.class)
 
 /**
- * The Test Runner File uses the @RunWith() Annotation from JUnit for executing
- * tests.
+ * The @CucumberOptions Annotation is used to define the location of feature
+ * files, step definitions, reporting integration.
  */
 @CucumberOptions(
-		features = ("src/spec/features"),
-		//glue = ("step_definition"}
+		features = {"src/spec/features"} ,
+		//glue = {"step_definition"}
 		plugin = {"pretty", "html:target/cucumber-report.html", "json:target/cucumber.json"},
-		tags = ("@authentification"),
+		tags = ("@CatalogExportCategoryDetails"),
 		monochrome = true,
 		snippets = CAMELCASE
 		)

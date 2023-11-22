@@ -1,4 +1,4 @@
-package com.e2eTest.automation.Utilis;
+ package com.e2eTest.automation.utils;
 
 import org.apache.logging.log4j.LogManager;
 
@@ -38,14 +38,13 @@ public class Setup {
 		LOGGER.info("scenario: " + scenario.getName()+"- started");
 		String browser = System.getProperty("browser");
 		if (browser == null) {
-			browser = "chrome";
+		  	browser = "chrome";
 		}
 		
 		switch (browser) {
 		case "chrome":
 			ChromeOptions chromeOptions =new ChromeOptions();
 			driver = new ChromeDriver(chromeOptions);
-			driver = new ChromeDriver();
 			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
@@ -74,7 +73,7 @@ public class Setup {
 			throw new IllegalArgumentException("Browser \"" + browser + "\" is not supported.");
 		}
 		
-	}
+	} 
 	
 	//Getter driver mte3i priver sakart 3alih maychouf kan classe ili howa fih il 7al sana3it methode getdriver bich na3ayelha bich traja3li driver lazim tekoun public
 	public static WebDriver getDriver() {

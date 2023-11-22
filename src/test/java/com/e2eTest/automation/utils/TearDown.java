@@ -1,4 +1,4 @@
-package com.e2eTest.automation.Utilis;
+package com.e2eTest.automation.utils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 

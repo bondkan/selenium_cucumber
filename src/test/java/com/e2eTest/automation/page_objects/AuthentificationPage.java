@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-import com.e2eTest.automation.Utilis.BasePage;
-import com.e2eTest.automation.Utilis.Setup;
+import com.e2eTest.automation.utils.BasePage;
+import com.e2eTest.automation.utils.Setup;
 
 public class AuthentificationPage extends BasePage{
 
@@ -20,8 +20,19 @@ public class AuthentificationPage extends BasePage{
 	@FindBy(how = How.ID, using = "Password")
     private static WebElement password;
 	
+	@FindBy(how = How.ID, using = "//li[normalize-space()='No customer account found']")
+	private static WebElement errorMessage;//
+	
 	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
     private static WebElement btnLogin;
+	
+	@FindBy(how = How.XPATH, using = "//a[normalize-space()='Logout']")
+    private static WebElement btnLogout;
+	
+	@FindBy(how = How.XPATH, using = "//h1[normalize-space()='Dashboard']")
+    private static WebElement dashboard;
+	
+	
 	
 	// @FindBy(id = "Email")
     //private static WebElement email;
@@ -41,6 +52,19 @@ public class AuthentificationPage extends BasePage{
 	public static WebElement getBtnLogin() {
 		return btnLogin;
 	}
+	
+	public static WebElement getErrorMessage() {
+		return errorMessage;
+	}
+	
+	public static WebElement getDashboard() {
+		return dashboard;
+	}
+
+	public static WebElement getBtnLogout() {
+		return btnLogout;
+	}
+
 	
 	
 	
